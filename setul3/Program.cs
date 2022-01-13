@@ -396,7 +396,7 @@ namespace setul3
 
         private static void problema14()
         {
-            int n = 10, k = 0, aux;
+            int n = 10, k = 0;
             int[] array = new int[10] { 0, 11, 23, 0, 14, 0, 0, 73, 4, 2 };
 
             Console.WriteLine("Vectorul initial:");
@@ -438,6 +438,36 @@ namespace setul3
 
         }
 
+        private static void problema16()
+        {
+            int n = 10, cmmdc, aux;
+            int[] array = new int[10] { 15, 9, 3, 81, 6, 300, 1002, 75, 18, 54 };
+
+            cmmdc = array[0];
+
+            for (int i = 1; i < n; i++)
+            {
+                aux = array[i];
+                while (aux != cmmdc)
+                {
+                    if (aux > cmmdc)
+                    {
+                        aux = aux - cmmdc;
+                    }
+                    else
+                    {
+                        cmmdc = cmmdc - aux;
+                    }
+                }
+            }
+            Console.WriteLine($"Cmmdc este {cmmdc}.");
+        }
+
+        private static void problema17()
+        {
+
+        }
+
         static void Main(string[] args)
         {
             //problema1();
@@ -470,7 +500,11 @@ namespace setul3
 
             //problema14();
 
-            problema15();
+            //problema15();
+
+            //problema16();
+
+            //problema17();
 
         }
     }
